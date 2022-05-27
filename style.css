@@ -1,0 +1,41 @@
+.containerHeader{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    background-color: rgb(100, 95, 95);
+}
+
+.containerHeader a{
+    color: rgb(12, 184, 27);
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    transition: transform 0.5s;
+}
+
+.containerHeader a:hover{
+    transform: scale(1.1);
+}
+
+.containerFooter{
+    margin-top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.containerFooter a{
+    color: rgb(12, 184, 27);
+    padding: 14px;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+.containerFooter a:hover{
+    transform: scale(1.1);
+}
