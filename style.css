@@ -39,3 +39,11 @@
 .containerFooter a:hover{
     transform: scale(1.1);
 }
+
+element.style{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+}

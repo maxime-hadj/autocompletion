@@ -41,21 +41,20 @@ $elementGet = $element->getGame($_GET['id']);
 </div>
 </div>
 
-<article id="gameDisplay">
-    <div>
+<div id="gameDisplay">
         <?php 
             echo "<h1>".$elementGet['0']['title']."<h1>";
             echo "<h2>Genre: ".$elementGet['0']['genre']."<h2>";
-            echo "<h3>Release year: ".$elementGet['0']['releasedate']."<h3>";
+            echo "<h3>Release year: ".$elementGet['0']['releasedate']."</h3>";
             echo "<p>Developped by: ".$elementGet['0']['developer']."<p>";
             echo "<p>Published by: ".$elementGet['0']['publisher']."<p>";
         ?>
-    </div>
-</article>
+</div>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
-    </main>
+</main>
+
 <?php require'footer.php'; ?>
 
 </body>
