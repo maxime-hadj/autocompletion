@@ -1,8 +1,8 @@
 <?php
-require 'game.php';
-$elements = new Game();
-$elementsGet = $elements->seekGames($_GET['search']);
-//var_dump($elementsGet);
+require '../views/game.php';
+$element = new Game();
+$elementGet = $element->getGame($_GET['id']);
+//var_dump($elementGet);
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +11,12 @@ $elementsGet = $elements->seekGames($_GET['search']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <title>Search</title>
+    <link href="../assets/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet">
+    <?php echo"<title>".$elementGet['0']['title']."</title>" ?>
 </head>
 <body>
-<?php require 'header.php'; ?>
+<?php require '../requires/header.php'; ?>
 
 <main>
 <div class="container" style="margin-top: 8%;">  
@@ -41,25 +41,21 @@ $elementsGet = $elements->seekGames($_GET['search']);
 </div>
 </div>
 
-<article>
-    <?php
-        foreach($elementsGet as $key => $value){
-            echo "<a href='element.php?id=".$value['id']."'>";
-            echo "<section class='containerSugg'>";
-            echo "<h1>".$value['title']."<h1>";
-            /*echo "<h2>Genre: ".$value['genre']."<h2>";
-            echo "<h3>Release year: ".$value['releasedate']."<h3>";
-            echo "<p>Developped by: ".$value['developer']."<p>";
-            echo "<p>Published by: ".$value['publisher']."<p>";*/
-            echo "</section>";
-            echo "</a>";
-        }
-    ?>
+<div id="gameDisplay">
+        <?php 
+            echo "<h1>".$elementGet['0']['title']."<h1>";
+            echo "<h2>Genre: ".$elementGet['0']['genre']."<h2>";
+            echo "<h3>Release year: ".$elementGet['0']['releasedate']."</h3>";
+            echo "<p>Developped by: ".$elementGet['0']['developer']."<p>";
+            echo "<p>Published by: ".$elementGet['0']['publisher']."<p>";
+        ?>
+</div>
 
-    <script src="main.js"></script>
+<script src="../views/main.js"></script>
 
 </main>
-<?php require('footer.php'); ?>
+
+<?php require '../requires/footer.php'; ?>
 
 </body>
 </html>

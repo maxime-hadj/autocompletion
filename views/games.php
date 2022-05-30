@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require '../views/db.php';
 
 class Games{
     function __construct(){

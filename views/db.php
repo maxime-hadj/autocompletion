@@ -9,6 +9,6 @@ $db=new PDO
     }
 
 function error(){
-    require 'index.php';
+    require '../views/index.php';
     exit();
 }

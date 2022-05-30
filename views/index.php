@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="../assets/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet">
     <title>LF Games</title>
 </head>
 <body>
-<?php require 'header.php'; ?>
+<?php require '../requires/header.php'; ?>
 
 <main>
 <div class="container" style="margin-top: 8%;">  
@@ -36,10 +36,10 @@
 </div>
 </div>
 
-    <script src="main.js"></script>
+    <script src="../views/main.js"></script>
 
 </main>
-<footer><?php require'footer.php'; ?></footer>
+<footer><?php require '../requires/footer.php'; ?></footer>
 
 </body>
 </html>

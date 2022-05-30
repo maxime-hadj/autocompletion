@@ -4,7 +4,7 @@ const searchGames = document.querySelector('#searchGames')
 const matchList = document.querySelector('#match-list')
 
 const fetchGames = async searchText =>{
-    const res = await fetch('games.php')
+    const res = await fetch('../views/games.php')
     const games = await res.json()
 
     let matches = games.filter(game =>{
@@ -39,11 +39,11 @@ const outputHTML = matches =>{
 }
 
 function searchPage(event){
-    event.key === 'Enter' ? location.href = `search.php?search=${searchGames.value}` : null
+    event.key === 'Enter' ? location.href = `../views/search.php?search=${searchGames.value}` : null
 }
 
 function searchButton(eventAlt){
-    eventAlt.click('searchButton') ? location.href = `search.php?search=${searchGames.value}` : null
+    eventAlt.click('searchButton') ? location.href = `../views/search.php?search=${searchGames.value}` : null
 }
 
 searchGames.addEventListener('keyup', (event) =>{ 
