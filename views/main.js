@@ -42,17 +42,18 @@ function searchPage(event){
     event.key === 'Enter' ? location.href = `../views/search.php?search=${searchGames.value}` : null
 }
 
-function searchButton(eventAlt){
-    eventAlt.click('searchButton') ? location.href = `../views/search.php?search=${searchGames.value}` : null
-}
+/*function searchButton(eventB){
+    eventB.click === click('searchButton') ? location.href = `../views/search.php?search=${searchGames.value}` : null
+}*/
 
 searchGames.addEventListener('keyup', (event) =>{ 
     fetchGames(searchGames.value)
     searchPage(event)
-    })
-
-searchGames.addEventListener('click', (eventAlt) =>{
-    searchButton(eventAlt)
 })
+
+/*searchGames.addEventListener('click', (eventB) =>{
+    fetchGames(searchGames.value)
+    searchButton(eventB)
+})*/
 
 })

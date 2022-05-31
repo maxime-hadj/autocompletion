@@ -21,13 +21,13 @@
 
         <div class="container mt-3">
             <div class="row">
-                <div class="col-md-3 m-auto">
+                <div class="col-md-2 m-auto">
                     <input id="searchGames" type="text" 
                         name="searchGames" placeholder="Search for a game..." required
                     />
-                        <span class="input-group-btn">
+                        <!--<span class="input-group-btn">
                             <button class="btn btn-success" id="searchButton" type="submit">Search</button>
-                        </span>
+                        </span>-->
                 </div>
             </div>
         </div>
